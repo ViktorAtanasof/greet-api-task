@@ -1,17 +1,49 @@
-/* Famoous people unordered list */
+main {
+  background-color: #feffff;
+  max-width: 72rem;
+  min-height: 100vh;
+  padding: 0 0.75rem;
+  margin: 0 auto;
+}
+
+/* Famous people unordered list */
 .people-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Spinner styles */
+.spinner {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  color: #ff6900;
+  font-size: 1.5rem;
+}
+
+/* Sort and Filter section */
+.sort-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem;
+  padding-left: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+  background-color: #feffff;
 }
 
 /* Responsive desing */
 @media (max-width: 768px) {
-    .people-list {
-      grid-template-columns: 1fr 1fr;
-    }
+  .people-list {
+    grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 425px) {
-    .people-list {
-      grid-template-columns: 1fr;
-    }
+}
+@media (max-width: 425px) {
+  .people-list {
+    grid-template-columns: 1fr;
   }
+}

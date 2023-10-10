@@ -94,8 +94,8 @@ function App() {
     : sortedPeople;
 
   return (
-    <>
-      <section>
+    <main>
+      <section className="sort-filter-container">
         <Sort
           selectedSortOption={selectedSortOption}
           onSortChange={setSelectedSortOption}
@@ -113,10 +113,10 @@ function App() {
               return <PersonCard key={person.id} person={person} />;
             })}
         </ul>
-        {loading && <p>Loading...</p>}
+        {loading && <p className="spinner">Loading...</p>}
         {!hasMoreData && <p>No more data to fetch.</p>}
       </section>
-    </>
+    </main>
   );
 }
 
