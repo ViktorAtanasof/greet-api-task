@@ -17,7 +17,7 @@
 
 .person__image {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.2s ease-in;
 }
 
@@ -49,7 +49,6 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  padding: 0px;
   gap: 5px;
 }
 
