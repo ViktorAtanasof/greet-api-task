@@ -1,0 +1,17 @@
+/* Famoous people unordered list */
+.people-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive desing */
+@media (max-width: 768px) {
+    .people-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 425px) {
+    .people-list {
+      grid-template-columns: 1fr;
+    }
+  }
