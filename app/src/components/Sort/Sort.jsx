@@ -1,12 +1,17 @@
+import "../Sort/Sort.css";
+
 function Sort({ selectedSortOption, onSortChange }) {
   const handleSortChange = (e) => {
     onSortChange(e.target.value);
   };
 
   return (
-    <section>
-      <label htmlFor="sortOption">Sort by:</label>
+    <div>
+      <label className="sort-label" htmlFor="sortOption">
+        Sort by:
+      </label>
       <select
+        className="sort-select"
         id="sortOption"
         onChange={handleSortChange}
         value={selectedSortOption}
@@ -15,7 +20,7 @@ function Sort({ selectedSortOption, onSortChange }) {
         <option value="name">Name</option>
         <option value="price">Price</option>
       </select>
-    </section>
+    </div>
   );
 }
 
