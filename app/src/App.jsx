@@ -19,9 +19,9 @@ function App() {
       hasMoreData &&
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 100
     ) {
-      setPage(page + 1);
+      setPage((prevPage) => prevPage + 1);
     }
-  }, [page, loading, hasMoreData]);
+  }, [loading, hasMoreData]);
 
   useEffect(() => {
     async function fetchApiData() {
@@ -73,7 +73,6 @@ function App() {
         uniqueCategoriesSet.add(category.slug);
       });
     });
-
     const uniqueCategories = Array.from(uniqueCategoriesSet);
     setCategories(uniqueCategories);
   }, [famousPeople]);
